@@ -1,0 +1,616 @@
+/* reset css */
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    z-index: 0;
+}
+
+body>header{
+    height: 46px;
+    width: 100%;
+    background-color:black;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header nav{
+    display: inline-block;
+}
+nav li {
+    display: inline-block;
+    position: relative;
+}
+
+nav .subnav{
+    display: none; 
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 3px 10px gray;
+}
+
+nav li:hover .subnav{
+    display: block;
+}
+nav a{
+    display: inline-block;
+    color:white;
+    text-decoration: solid;
+    height: 46px;
+    padding: 12px 24px;
+}
+nav .subnav a {
+    color: black;
+    min-width: 160px;
+    width: 100%;
+}
+li.subli {
+    width: 100%;
+}
+
+nav li:hover > a{
+    background-color: #ccc;
+    color: black;
+}
+
+ header .fa.fa-search {
+    font-size: 15px;
+    color: white;
+    
+}
+
+header .search, header .mobile-menu{
+    float: right;
+    height: 100%;
+    padding: 12px 24px;
+}
+
+header .search:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+header .mobile-menu{
+    display: none;
+}
+
+.slider{
+    width: 100%;
+    margin-top: 46px;
+    padding-top: 50%;
+    background:  linear-gradient(0,rgba(20, 20, 20, 0.6),rgba(20, 20, 20, 0.6)), url('../image/slider1.jpg') top center /cover no-repeat;
+    position: relative;
+    z-index: -1;
+}
+
+.slider .text-content{
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    text-shadow: 0 0 2px black;
+}
+
+.text-content h2 {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.text-content p {
+    font-weight: 700;
+}
+
+.main-content{
+    text-align: center;
+}
+
+.main-content section,
+.cover-detail{
+    max-width: 100%;
+    width: 800px;
+    margin: 32px auto;
+    padding: 32px 16px;
+}
+
+
+.main-content section h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+.main-content section .subhead{
+    margin-bottom: 15px;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    margin: 30px  0;
+}
+.about .introduce{
+    text-align: justify;
+    line-height: 1.5;
+    margin: 10px auto;
+}
+
+
+
+
+.flex-item{
+    width: 30%;
+    padding: 12px 0;
+}
+
+
+.flex-container{
+    display: flex;
+    padding: 32px 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.band{
+    padding-bottom: 0;
+}
+.band img{
+    margin-bottom: 16px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.band p{
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+
+.booking, .contact{
+    background-color: black;
+    color: white;
+    width: 100% !important;
+}
+
+.booking li{
+    background-color: white;
+    color: rgb(117, 117, 117);
+    border-bottom: rgb(221, 221, 221)  1px solid;
+    padding: 8px 16px;
+    list-style: none;
+    text-align: left;
+}
+
+.blackBackground{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+.cover-detail::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.blackBackground::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.booking .soldout{
+    width: 54px;
+    height: 22px;
+    padding: 0 8px;
+    margin-left: 16px;
+    color: white;
+    background-color: #f44336;
+    text-align: center;
+}
+
+.booking .sold{
+    margin-right: 16px;
+    float: right;
+    border-radius: 50%;
+    background-color: black;
+    color:white;
+    padding: 0 8px;
+    line-height: 22.5px;
+}
+
+.place{
+    justify-content: space-between;
+}
+
+.place-item{
+    width: 32%;
+}
+
+.place img{
+    width: 100%;
+    background-size: contain;
+    display: block;
+    opacity: 0.7;
+}
+
+.place img:hover{
+    opacity: 0.5;
+}
+
+.place .detail{
+    color: black;
+    background-color: white;
+    padding: 0.15px 16px;
+    text-align: left;
+}
+
+
+
+.place .Name{
+    font-weight: bolder;
+    font-size: 14px;
+    margin: 15px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.place .schedule{
+    color: rgb(117, 117, 117);
+    margin: 15px 0;
+}
+
+.place .address{
+    margin: 15px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.place button{
+    text-align: center;
+    width: 108px;
+    height: 38px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border: 0;
+}
+
+
+
+.modal{
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    background-color: white;
+    width: 900px;
+    min-height: 400px;
+    box-shadow: 0 0 10px rgb(59, 57, 57);
+    animation: modalFadeIn ease 0.5s;
+}
+
+
+
+.modal-container header{
+    background-color: #009688;
+    color: white;
+    padding: 32px 16px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-container header span{
+    font-size: 24px;
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 8px 16px;
+    line-height: 1.5;
+    background-color: inherit;
+    color: inherit;
+}
+.grey-hover{
+    color: white;
+    background-color: black;
+}
+.grey-hover:hover{
+    background-color: #ccc !important;
+    color: black !important;
+    cursor:  pointer;
+}
+
+
+.modal-container header h2{
+    font-size: 30px;
+    margin: 10px 0;
+    letter-spacing: 4px;
+}
+.modal-container header i{
+    margin-right: 16px;
+}
+
+.modal-container main,
+.modal-container footer{
+    padding: 0 16px;
+}
+.modal-container label{
+    display: block;
+    margin: 15px 0;
+}
+.modal-container input{
+    padding: 8px;
+    border: #ccc 1px solid;
+    width: 100%;
+}
+.modal-container button.pay{
+    color: white;
+    display: block;
+    padding: 16px;
+    width: 100%;
+    margin: 16px 0;
+    background-color: #009688;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-container button.close{
+    color: white;
+    padding: 8px 16px;
+    margin: 16px 0;
+    background-color: #f44336;
+    border: 0;
+    float: left;
+}
+
+.modal-container .help{
+    float: right;
+    margin: 15px 0;
+    
+}
+.modal-container .help a{
+    color: #2196F3;
+}
+
+.cover-detail i{
+    margin-right: 16px;
+
+}
+.cover-detail p{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.8;
+}
+.cover-detail a{
+    color:#f44336;
+}
+.cover-detail a:visited{
+    color:#2196F3;
+}
+
+
+.cover-detail .left,
+.cover-detail .right{
+    display: block;
+    margin-bottom: 16px;
+    width: 49.9%;
+    float: left;
+}
+form .full-input{
+     width: 100%;
+}
+
+.right .cover-input{
+    width: 49.999%;
+    float: left;
+    padding: 0 8px;
+}
+
+.right .row-input{
+    margin: 0 -16px 8px -16px;
+    padding: 0 8px;
+}
+
+.right .row-input::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.right .row-input::before{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.right input{
+    border:1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    display: block;
+}
+
+.right button{
+    padding: 8px 16px;
+    margin: 16px 0;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    float: right;
+    --webkit-appearance: none;
+}
+
+.video-cover .vertical{
+    width: 267px;
+    height: 467px;
+    margin: 64px auto;
+}
+.video-cover iframe{
+    width: 800px;
+    height: calc((800/560)*315px);
+    margin: 64px 0;
+    box-shadow: 0 0 15px #333;
+}
+
+.vertical-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-cover p.description{
+    border-bottom: 1px solid #009688;
+    display: inline;
+    padding: 0 40px 4px;
+    font-size: 20;
+    font-weight: bold;
+}
+
+
+footer{
+    text-align: center;
+    padding: 64px 16px;
+}
+footer p{
+    margin-top: 16px;
+}
+footer i{
+    font-size: 24px !important;
+    opacity: 0.6;
+}
+
+.hover-opacity:hover{
+    opacity: 0.4;
+}
+
+
+
+
+
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+
+/* slider */
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  background-color: black;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
